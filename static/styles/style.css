@@ -1,4 +1,28 @@
-.centered {
-    margin: 0 auto !important;
-    float: none !important;
+body {
+    background: #00b894;
+    background: linear-gradient(to right, #60941a, #81ecec);
+    background: -webkit-linear-gradient(to right, #60941a, #81ecec);
+}
+
+.form-container{
+    width: 370px;
+    height: 400px;
+    margin: 8% auto;
+    background-color: #f2f1e8;
+
+}
+input {
+    width: 100px;
+}
+.food-pages {
+    left:450px;
+}
+
+.button-div{
+    float:right;
+}
+
+button{
+    width: 100px;
+    
 }
