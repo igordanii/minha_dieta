@@ -16,6 +16,7 @@ body {
     background: #fff;
     border-radius: 5px;
     position: relative;
+    background: linear-gradient(to top,#ced6e0, #fff);
 }
 
 h3 {
@@ -24,14 +25,14 @@ h3 {
     color: #777;
 }
 
-.form-container form{
+.form-container .form-div{
     width: 280px;
     position: absolute;
     top: 100px;
     left: 40px;
 }
 
-form input{
+.form-div input{
     width: 100%;
     padding: 10px 5px;
     margin: 5px 0;
@@ -50,7 +51,7 @@ form input{
     text-align: center;
 }
 
-form button{
+.form-div button{
     width:110px;
     height: 35px;
     margin: 0 10px;
@@ -65,4 +66,17 @@ form button{
 #form2{
     left: 450px;
     visibility: hidden;
+}
+
+#success{
+    width: 280px;
+    position: absolute;
+    top: 150px;
+    left: 40px;
+    text-align: center;
+}
+
+#success img{
+    width: 80px;
+    height: 80px;
 }

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block page_title %}Minha Dieta{% endblock %}
+{% block content %}
+    <div class="form-container ">
+        <div id="success">
+            <img src="{{url_for('static', filename='check.png')}}" alt="Successful submission">
+            <h3>Successful submission</h3>
+        </div>
+    </div>
+{% endblock %}
