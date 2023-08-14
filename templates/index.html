@@ -1,26 +1,49 @@
 {% extends "base.html" %}
 {% block page_title %}Minha Dieta{% endblock %}
 {% block content %}
+    <div class="form-container">
+        <form id="form1">
+            <h3>SUA REFEIÇÃO</h3>
+            <input type="text" placeholder="Descrição da sua refeição" required>
+            <input type="number" placeholder="Quantidade de carboidratos (g)" required>
+            <input type="number" placeholder="Quantidade de proteínas (g)" required>
+            <input type="number" placeholder="Quantidade de gorduras (g)" required>
+            <div class="btn-box">
+                <button type="button" id="next">Próximo</button>
+            </div>
+        </form>
 
-    <form id="page1" class="container form-control form-container">
-        <div class="mb-3">
-            <label for="formGroupExampleInput" class="form-label">Descrição</label>
-            <input type="text" class="form-control form-control-sm" id="formGroupExampleInput" placeholder="Descreva sua refeição">
-        </div>
-        <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">Proteínas</label>
-            <input type="text" class="form-control form-control-sm" id="formGroupExampleInput2" placeholder="Quantidade de Proteínas em g">
-        </div>
-        <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">Carboidratos</label>
-            <input type="text" class="form-control form-control-sm" id="formGroupExampleInput2" placeholder="Quantidade de Carboidratos em g">
-        </div>
-        <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">Gorduras</label>
-            <input type="text" class="form-control form-control-sm" id="formGroupExampleInput2" placeholder="Quantidade de Gorduras em g">
-        </div>
-        <div class="d-grid gap-2 button-div" type="submit">
-            <button type="button" class="btn btn-primary btn-sm">Próximo</button>  
-        </div>
-    </form>
-  {% endblock %}
+        <form id="form2">
+            <h3>ITEM DA REFEIÇÃO</h3>
+            <input type="text" placeholder="Descrição do alimento" required>
+            <input type="number" placeholder="Quantidade de carboidratos (g)" required>
+            <input type="number" placeholder="Quantidade de proteínas (g)" required>
+            <input type="number" placeholder="Quantidade de gorduras (g)" required>
+            <div class="btn-box">
+                <button type="button" id="back">Anterior</button>
+                <button type="submit" id="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        var Form1 = document.getElementById("form1");
+        var Form2 = document.getElementById("form2");
+        var back = document.getElementById("back");
+        var submit = document.getElementById("submit");
+        var next = document.getElementById("next");
+
+        next.onclick = function(){
+            Form1.style.left = "450px";
+            Form2.style.left = "40px";
+            Form1.style.visibility = "hidden";
+            Form2.style.visibility = "visible";
+        }
+
+        back.onclick = function(){
+            Form1.style.left = "40px";
+            Form2.style.left = "450px";
+            Form1.style.visibility = "visible";
+            Form2.style.visibility = "hidden";
+        }
+    </script>
+{% endblock %}
